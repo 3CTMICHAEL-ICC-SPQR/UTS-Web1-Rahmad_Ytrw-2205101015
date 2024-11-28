@@ -1,0 +1,157 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(20, 81%, 51%);
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "section"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    text-align: center;
+}  
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    padding: 0;
+}
+nav {
+    width: 100%;
+    grid-area: nav;
+    background-color: #3e0202;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    margin: 0;
+}
+
+nav ul li {
+    margin:  0 10px;
+}
+
+section {
+    grid-area: section;
+    background-color: hsl(0, 67%, 1%);
+    min-height: calc(100vh - 100px);
+}
+
+section h1 {
+    color: #e6b111;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 13px;
+    grid-area: footer;
+    background-color: #3e0202;
+}
+
+.dropbtn {
+    background-color: rgb(132, 124, 124);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: white;
+    border-radius: 50px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-dua {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(184, 5, 5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #49454533;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: hsl(0, 100%, 99%);}
+
+.dropdown:hover .dropdown-content, .dropdown-dua:hover .dropdown-content, .dropdown-tiga:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn, .dropdown-dua:hover .dropbtn, .dropdown-tiga:hover .dropbtn {background-color: #3e8e41;}
+
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+    border: 2px solid black;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.column img {
+    width: 200px;
+    height: 200px;
+}
+.column img:hover {
+    opacity: 1;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container-img {
+    position: relative;
+    display: none;
+}
+
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgb(7, 0, 0);
+    font-size: 20px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgb(3, 0, 0);
+    font-size: 35px;
+    cursor: pointer;
+}
